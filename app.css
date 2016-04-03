@@ -36,7 +36,7 @@ a {
   left: 50%;
   transform: translate3d(-50%, -50%, 0);
   box-sizing: border-box;
-  max-width: 250px;
+  max-width: 210px;
   animation-delay: calc(var(--animation-duration) * 1.1);
 
   & > svg {
@@ -54,8 +54,8 @@ a {
     text-transform: uppercase;
     font-size: 0.8em;
     width: 50%;
-    top: 81%;
-    left: 63%;
+    top: 79%;
+    left: 62.5%;
     min-width: 125px;
     line-height: 1.2;
   }
@@ -81,6 +81,16 @@ a {
       right: -75vw;
       top: -105vw;
     }
+
+    @media screen and (max-width: 480px) {
+      &:first-child {
+        width: 85vh;
+      }
+
+      &:last-child {
+        display: none;
+      }
+    }
   }
 }
 
@@ -99,6 +109,10 @@ a {
     display: inline-block;
     vertical-align: top;
     padding: .1em;
+
+    @media screen and (max-width: 480px) {
+      padding: .2em;
+    }
 
     &:hover svg {
       color: var(--tertiary-hover);
