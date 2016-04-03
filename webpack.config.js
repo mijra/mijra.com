@@ -1,12 +1,10 @@
-var path = require('path');
-
-var autoprefixer = require('autoprefixer');
-var precss = require('precss');
+// var path = require('path')
+var autoprefixer = require('autoprefixer')
+var precss = require('precss')
+var url = require('postcss-url')
 
 module.exports = {
-  entry: {
-    app: ['./app.js']
-  },
+  entry: './app.js',
   output: {
     path: require('path').resolve('build'),
     publicPath: '/',
@@ -17,11 +15,6 @@ module.exports = {
       {
         test: /\.css$/,
         loader: 'style-loader!css-loader?modules&importLoaders=1!postcss-loader'
-      },
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: 'babel-loader'
       }
     ]
   },
@@ -31,7 +24,8 @@ module.exports = {
       precss,
       postcssImport({
         addDependencyTo: webpack
-      })
+      }),
+      require('postcss-cssnext')()
     ]
   },
   plugins: []
