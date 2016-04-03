@@ -1,0 +1,78 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+:root {
+  --body-background: #ffffff;
+
+  --primary: #DB1F48;
+  --primary-hover: var(--primary);
+
+  --secondary: #F5F3F4;
+  --secondary-hover: var(--secondary);
+
+  --tertiary: #CDCCCA;
+  --tertiary-hover: var(--tertiary);
+}
+
+body {
+  background: var(--body-background);
+  overflow: hidden;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.logo {
+  color: var(--secondary);
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  max-width: 250px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-decoration: none;
+
+  & > svg {
+    color: var(--primary);
+    width: 100%;
+  }
+
+  &:hover > svg {
+    color: var(--primary-hover);
+  }
+
+  & > span {
+    color: var(--tertiary);
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    top: 80%;
+    width: 50%;
+    left: 63%;
+    min-width: 125px;
+  }
+}
+
+.background {
+  color: var(--secondary);
+  position: relative;
+  height: 100vh;
+  z-index: 0;
+
+  & > svg {
+    position: absolute;
+    width: 85vw;
+
+    &:first-child {
+      left: -45vw;
+      top: -10vw;
+    }
+
+    &:last-child {
+      width: 120vw;
+      right: -75vw;
+      top: -105vw;
+    }
+  }
+}
+
+.social {
+  color: var(--secondary);
+}
