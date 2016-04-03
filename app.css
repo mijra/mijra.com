@@ -25,12 +25,12 @@ a {
 
 .logo {
   color: var(--secondary);
+  position: absolute;
+  top: 48%;
+  left: 50%;
   transform: translate3d(-50%, -50%, 0);
   box-sizing: border-box;
   max-width: 250px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
 
   & > svg {
     color: var(--primary);
@@ -46,10 +46,11 @@ a {
     position: absolute;
     text-transform: uppercase;
     font-size: 0.8em;
-    top: 80%;
     width: 50%;
+    top: 81%;
     left: 63%;
     min-width: 125px;
+    line-height: 1.2;
   }
 }
 
@@ -78,11 +79,36 @@ a {
 
 .social {
   position: absolute;
-  bottom: 8%;
+  bottom: 4%;
   left: 50%;
-  transform: translate3d(-50%);
+  transform: translate3d(-50%, 0, 0);
+  font-size: 24px;
+  line-height: 1;
+  text-align: center;
+
+  a {
+    line-height: 1;
+    display: inline-block;
+    vertical-align: top;
+    padding: .1em;
+
+    &:nth-child(1) svg {
+      height: .8em;
+    }
+
+    &:nth-child(3) svg {
+      height: .8em;
+    }
+  }
 
   svg {
+    height: 1em;
     color: var(--tertiary);
+  }
+
+  .email {
+    display: block;
+    color: var(--tertiary);
+    font-size: .5em;
   }
 }
