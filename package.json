@@ -4,18 +4,24 @@
   "description": "",
   "scripts": {
     "start": "webpack-dev-server",
+    "dev": "webpack-dev-server --watch",
     "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "",
   "dependencies": {
+    "normalize-css": "^2.3.1",
     "normalize.css": "^4.0.0"
   },
   "devDependencies": {
+    "css-loader": "^0.23.1",
     "postcss-cssnext": "^2.5.1",
     "postcss-import": "^8.0.2",
+    "postcss-loader": "^0.8.2",
     "postcss-url": "^5.1.1",
+    "precss": "^1.4.0",
+    "style-loader": "^0.13.1",
     "webpack": "^1.12.14",
     "webpack-dev-server": "^1.14.1"
   }
