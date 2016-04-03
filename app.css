@@ -10,7 +10,9 @@
   --secondary-hover: var(--secondary);
 
   --tertiary: #CDCCCA;
-  --tertiary-hover: var(--tertiary);
+  --tertiary-hover: #b4b3b0;
+
+  --animation-duration: 1.2s;
 }
 
 body {
@@ -23,6 +25,10 @@ a {
   text-decoration: none;
 }
 
+.animated.fadeIn {
+  animation-duration: var(--animation-duration);
+}
+
 .logo {
   color: var(--secondary);
   position: absolute;
@@ -31,6 +37,7 @@ a {
   transform: translate3d(-50%, -50%, 0);
   box-sizing: border-box;
   max-width: 250px;
+  animation-delay: calc(var(--animation-duration) * 1.1);
 
   & > svg {
     color: var(--primary);
@@ -85,12 +92,17 @@ a {
   font-size: 24px;
   line-height: 1;
   text-align: center;
+  animation-delay: calc(var(--animation-duration) * 1.6);
 
   a {
     line-height: 1;
     display: inline-block;
     vertical-align: top;
     padding: .1em;
+
+    &:hover svg {
+      color: var(--tertiary-hover);
+    }
 
     &:nth-child(1) svg {
       height: .8em;
@@ -104,11 +116,17 @@ a {
   svg {
     height: 1em;
     color: var(--tertiary);
+    transition: .1s linear all;
   }
 
   .email {
     display: block;
     color: var(--tertiary);
     font-size: .5em;
+    transition: .1s linear all;
+
+    &:hover {
+      color: var(--tertiary-hover);
+    }
   }
 }
