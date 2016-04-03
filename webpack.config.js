@@ -20,7 +20,6 @@ module.exports = {
   },
   postcss: function (webpack) {
     return [
-      autoprefixer,
       precss,
       cssimport({
         addDependencyTo: webpack
