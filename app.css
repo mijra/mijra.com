@@ -48,7 +48,7 @@ a {
     color: var(--primary-hover);
   }
 
-  & > span {
+  & > figcaption {
     color: var(--tertiary);
     position: absolute;
     text-transform: uppercase;
