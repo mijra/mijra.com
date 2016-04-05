@@ -2,7 +2,7 @@
 Mijra's official website
 
 ## Setup
-To run project you probably need [Node.js](https://nodejs.org/en/download/) and [NPM](https://docs.npmjs.com/cli/install) installed.
+To run a project in dev mode, you probably need [Node.js](https://nodejs.org/en/download/) and [NPM](https://docs.npmjs.com/cli/install) installed.
 
 After it you can run:
 
