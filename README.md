@@ -8,7 +8,7 @@ After it you can run:
 
     npm i webpack webpack-dev-server -g && npm i
 
-To run you can use:
+To run, you can use:
 
     npm run dev
 
